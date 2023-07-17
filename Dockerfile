@@ -23,8 +23,7 @@ ENV NODE_VERSION  v14.21.3
 
 # Install nvm with node and npm
 RUN \
-  whoami \
-  && mkdir $NVM_DIR \
+  mkdir $NVM_DIR \
   && cd $NVM_DIR \
   && git clone https://github.com/nvm-sh/nvm.git . \
   && git checkout $NVM_VERSION \
@@ -37,6 +36,7 @@ ENV NODE_PATH   $NVM_DIR/versions/node/$NODE_VERSION/bin/node
 ENV NPM_PATH    $NVM_DIR/versions/node/$NODE_VERSION/bin/npm
 ENV PATH        $NVM_DIR/$NODE_VERSION/bin:$PATH
 
+# link binaries
 RUN \
   ls -lah /usr/local/bin \
   && ln -s $NODE_PATH /usr/local/bin/node \
