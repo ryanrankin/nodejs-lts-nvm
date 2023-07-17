@@ -1,6 +1,6 @@
 # nodejs-lts-nvm
 
-## Nodejs lts installed with nvm
+## Dockerized Nodejs LTS installed with nvm on Ubuntu 22.04.2 LTS (Jammy Jellyfish)
 
 ## Build
 
